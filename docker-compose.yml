@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  wordpress:
+    image: wordpress
+    environment:
+      WORDPRESS_DB_PASSWORD: ${WP_DB_USER_PASSWORD}
+      WORDPRESS_DB_NAME: ${WP_DB_NAME}
+    ports:
+      - 8080:80
+    volumes:
+      - localocean:/var/www/html
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${WP_DB_USER_PASSWORD}
+      MYSQL_DATABASE: ${WP_DB_NAME}
+volumes:
+    localocean:
+    
+    
+#  3.1 versijos pilna faila pasiziuret ir pataisyt sita (cia v2)
+#  kazkodel neisijungia/nezinau kur ijungia
+#  meta successful, bet nezinau kur reikia paziuret
+#  localhost netinka, 127.0.0.1 netinka, localhost:8000 netinka, localhost:8080 netinka
