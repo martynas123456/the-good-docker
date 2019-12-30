@@ -1,0 +1,1051 @@
+/*
+Theme Name: Boostrap Starter Theme
+Theme URI: https://www.lyrathemes.com/bootstrap-wordpress-theme-tutorial/
+Author: Abby
+Author URI: https://www.lyrathemes.com
+Description: A basic theme using the Bootstrap framework.
+Version: 1.0
+Text Domain: bootstrapstarter
+*/
+/* stylelint-disable selector-list-comma-newline-after, property-no-vendor-prefix */
+
+/*
+ * Globals
+ */
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #fff;
+}
+/* Header images + header*/
+img#logo {
+	height: 300px;
+    position: absolute;
+    right: 0;
+    top: -30px;
+	background-color: #ffffff;
+    padding: 0px 20px 20px;
+	z-index: 1;
+}
+img#pirkti {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+	z-index: 1;
+}
+img#krevete-photo {
+	width:100%;
+}
+div#menu-soc-icons {
+	display: inline-block;
+    position: absolute;
+    line-height: 6.5;
+	display: inline-block;
+    left: 100%;
+    right: -20%;
+}
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 700;
+  color: rgb(63,147,188);
+  line-height:90px;
+  font-size:16px;
+  font-family:PlutoSans;
+  text-transform: uppercase;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: rgba(63,147,188,0.5);
+  text-decoration: none;
+}
+.blog-nav-item:not(a > img) {
+	
+}
+.blog-nav {
+	text-align: center;
+}
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+  background-color: rgb(0,46,78);
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  content: "";
+  border-bottom: 4px solid red;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: 400;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+  background-color: rgb(0,46,78);
+  border-top: 4px solid red;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+img#footer-photo {
+	display:inline-block;
+	height: 150px;
+}
+.footer-all {
+	display:inline-block;
+	vertical-align: middle;
+	font-family: PlutoSans;
+	font-weight: 100;
+}
+.footer-info {
+	width:50%;
+	margin:0 20px;
+}
+.footer-pages {
+	margin:10px 0;
+}
+.footer-about {
+	font-size: 12px;
+}
+.footer-social-icon {
+    display: block;
+    height: 40px;
+    margin: 10px 0;
+}
+.footer-pages-link {
+	text-transform:uppercase;
+	margin:0 5px;
+	color: white;
+}
+.footer-pages-link:hover {
+	text-decoration: none;
+    cursor:pointer;
+}
+
+/*
+ * Fonts
+ */
+ 
+ @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansThin.otf");
+	font-weight: 100;
+ }
+  @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansExtraLight.otf");
+	font-weight: 200;
+ }
+  @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansLight.otf");
+	font-weight: 300;
+ }
+  @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansRegular.otf");
+	font-weight: 400;
+ }
+  @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansMedium.otf");
+	font-weight: 500;
+ }
+  @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansBold.otf");
+	font-weight: 600;
+ }
+  @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansHeavy.otf");
+	font-weight: 700;
+ }
+  @font-face {
+	font-family: PlutoSans;
+	src: url("../../../font/pluto/pluto sans/PlutoSansBlack.otf");
+	font-weight: 800;
+ }
+ 
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondThin.otf");
+	font-weight: 100;
+ }
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondExLight.otf");
+	font-weight: 200;
+ }
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondLight.otf");
+	font-weight: 300;
+ }
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondRegular.otf");
+	font-weight: 400;
+ }
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondMedium.otf");
+	font-weight: 500;
+ }
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondBold.otf");
+	font-weight: 600;
+ }
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondHeavy.otf");
+	font-weight: 700;
+ }
+  @font-face {
+	font-family: PlutoSansCond;
+	src: url("../../../font/pluto/pluto sans cond/PlutoSansCondBlack.otf");
+	font-weight: 800;
+ }
+ 
+ nav.blog-nav.navbar {
+	padding-bottom: 0px;
+}
+
+ /*
+  *  Container Main
+  */
+.container-main {
+	max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+@media (min-width: 576px)
+{
+.col-sm-8 {
+    -ms-flex: 0 0 100%;
+     flex: 0 0 100%; 
+     max-width: 100%; 
+	 padding: 0;
+}
+}
+/*
+ *  Krevetė(photo div + tekstas homepage)
+ */
+.krevete {
+	background-image: url(/localocean/wp-content/uploads/2019/10/ranka-krevete-high-ress.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.krevetes-svieziausios {
+    height: 20vh;
+    right: 0;
+    top: 5%;
+    position: absolute;	
+}
+#krevetes-svieziausios-foto {
+	display: block;
+}
+.krevetes-svieziausios-social-icon {
+	margin: 5px;
+}
+/*
+ * Homepage Krevetė Jeigu Kalbėtų
+ */
+.krevetes-lietuviskai {
+	position: relative;
+	top:55%;
+	left: 50%;
+	width:510px;
+}
+.krevetes-lietuviskai-2
+{
+	width:90%;
+}
+/*
+ * Homepage Kodėl Šviežiausios
+ */
+#homepage-kodel-svieziausios {
+background-image: radial-gradient(rgb(100,178,217), rgb(77,158,199));
+    padding-top: 150px;
+    padding-bottom: 150px;
+	text-align:center;
+	height: 750px;
+}
+.puslapio-content {
+	margin-bottom: 0px;
+}
+.homepage-kodel-svieziausios {
+	width: 500px;
+	text-align:center;
+	display: inline-block;
+	text-transform: uppercase;
+	color: rgb(0,46,78);
+	font-size: 65px;
+	font-family: PlutoSans;
+	font-weight: 300;
+	vertical-align: middle;
+}
+.homepage-kodel-svieziausios.klausimas {
+	text-align: left;
+	word-spacing: 999rem;
+}
+.homepage-kodel-svieziausios.atsakymas, .homepage-kodel-svieziausios.atsakymas > img {
+	height: 100%;
+}
+
+@media only screen and (max-width:1360px)
+{
+img#logo {
+	display:block;
+	position:relative;
+	margin: 50px auto auto auto;
+}
+.blog-nav-item:first-child {
+	display:block;
+}
+div#menu-soc-icons {
+	position: relative;
+}
+}
+
+/*
+ * Apie Mus
+ */
+ 
+.apie-mus-image {
+    padding: 100px 25% 1px 25%;
+	
+}
+h2.apie-mus {
+    font-size: 68pt;
+    font-family: PlutoSans;
+    font-weight: 100;
+    color: #00324e;
+	padding-top:80px;
+}
+p.apie-mus {
+	padding: 100px 20% 80px; /* responsive padding(width)*/
+	font-family: PlutoSans;
+	font-weight: 400;
+	font-size: 16px;
+	line-height:1.5;
+	color: #00324e;
+}
+
+h2.apie-mus-inverted {
+    font-size: 68pt;
+    font-family: PlutoSans;
+    font-weight: 100;
+    color: white;
+    padding-top: 80px;
+}
+
+p.apie-mus-inverted {
+    padding: 100px 20% 80px;
+    font-family: PlutoSans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+	margin-bottom: 0px;
+}
+
+.apie-mus-inverted-outer {
+	background-image: radial-gradient(rgb(1,65,106),rgb(0,47,79));
+}
+/*
+ * Technologija
+ */
+ 
+h2.technologija-h2 {
+    font-size: 30pt;
+    font-family: PlutoSans;
+    font-weight: 200;
+    color: #00324e;
+	
+	margin: 0px 20%;
+	padding-top: 15px;
+}
+
+p.technologija-text {
+	font-size: 16pt;
+	font-family: PlutoSans;
+	font-weight: 400;
+	color: #00324e;
+	
+	margin: 0px 20%;
+    padding-top: 20px;
+}
+
+p.technologija-placiau {
+	text-transform: uppercase;
+	color: #c20e1a;
+	font-family: PlutoSans;
+	font-weight: 400;
+	font-size: 16pt;
+	
+	margin: 50px 20%;
+}
+
+div.technologija-h2-foto {
+	margin-left: 13%;
+	margin-top: 50px;
+}
+
+div#technologija-video-div {
+	padding: 50px 0px;
+    background-image: radial-gradient(rgb(100,178,217),rgb(76,158,198));
+}
+
+#technologija-video {
+	display: block;
+	margin: auto;
+	background-color: black;
+    padding: 20px 0;
+	/*width: 800px;
+	height: 373px;*/
+}
+
+/*
+ * Šviežumas
+ */
+ 
+ h2.sviezumas-h2 {
+    font-size: 30pt;
+    font-family: PlutoSans;
+    font-weight: 200;
+    color: #00324e;
+	
+	margin: 0px 20%;
+	padding-top: 15px;
+}
+
+p.sviezumas-text {
+	font-size: 16pt;
+	font-family: PlutoSans;
+	font-weight: 400;
+	color: #00324e;
+	
+	margin: 0px 20%;
+    padding-top: 20px;
+}
+
+p.sviezumas-placiau {
+	text-transform: uppercase;
+	color: #c20e1a;
+	font-family: PlutoSans;
+	font-weight: 400;
+	font-size: 16pt;
+	
+	margin: 50px 20%;
+}
+
+div.sviezumas-h2-foto {
+	margin-left: 13%;
+	margin-top: 50px;
+}
+
+/*
+ *	Receptai
+ */
+p.receptai {
+    margin: auto;
+    display: block;
+    width: 80%;
+    font-family: PlutoSans;
+    text-align: justify;
+}
+
+.receptai-logo {
+    padding-top: 105px;
+    padding-bottom: 35px;
+}
+
+h2.receptai {
+    font-family: PlutoSans;
+    font-weight: 200;
+    font-size: 60pt;
+    color: #002e4e;
+    padding-bottom: 100px;
+}
+
+.receptai-gallery {
+	padding: 0px 10%;
+}
+
+.receptai-gallery > li > figure > img {
+    padding: 0px 2.5%;
+}
+
+h2.receptai.receptai-inverted {
+    color: white;
+}
+
+.receptai-inverted {
+    margin-bottom: 0px;
+}
+
+.receptai-inverted-outer {
+	background-image: radial-gradient(rgb(1,65,106),rgb(0,47,79));
+}
+
+.receptai-inverted-logo {
+	margin-top: 50px;
+	padding-top: 50px;
+}
+
+.receptai-inverted.receptai-gallery {
+    padding-bottom: 50px;
+}
+
+/*
+ * Kontaktai
+ */
+ 
+p.kontaktai {
+    font-family: PlutoSans;
+    color: #00324e;
+    line-height: 2;
+    font-weight: 400;
+    font-size: 16pt;
+}
+
+h2.kontaktai {
+    font-family: PlutoSans;
+    font-size: 60pt;
+    font-weight: 200;
+    color: #00324e;
+    text-transform: uppercase;
+}
+
+h3.kontaktai {
+    font-family: PlutoSans;
+    font-size: 40pt;
+    font-weight: 200;
+    color: #00324e;
+    text-transform: uppercase;
+}
+
+.kontaktai-logo {
+	margin-top: 80px;
+}
+
+.mapouter {
+	margin-left: auto;
+    margin-right: auto;
+    padding: 1% 10%;
+    background-image: radial-gradient(rgb(100,178,217), rgb(77,158,199));
+}
+
+/*
+ *	Kur Įsigyti
+ */ 
+p.kur-isigyti {
+    margin: auto;
+    display: block;
+    width: 80%;
+    font-family: PlutoSans;
+    text-align: justify;
+}
+
+h2.kur-isigyti {
+    font-family: plutosans;
+    font-size: 60pt;
+    font-weight: 200;
+    color: #00324e;
+    padding-top: 100px;
+	margin-bottom:0px;
+	text-transform: uppercase;
+}
+
+h3.kur-isigyti {
+    font-family: plutosans;
+    font-weight: 200;
+    font-size: 30pt;
+    color: #00324e;
+	text-transform: uppercase;
+	padding-bottom: 100px;
+}
+
+h3.kur-isigyti[id=kur-isigyti-kiekis-h3] {
+	padding-bottom: inherit;
+	padding-top: 100px;
+}
+.form-control {
+	border: 3px solid rgb(0,47,79);
+	height: unset;
+}
+
+form.kur-isigyti-forma p {
+    text-transform: none;
+    font-size: 16pt;
+    font-weight: 500;
+}
+
+select#quantity {
+	min-width: 72px;
+	max-width: 72px;
+	margin: auto;
+}
+
+label[for=inputKiekis] {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+.form-group.row {
+	display: block;
+}
+
+label[for=inputKiekis] {
+	text-align:center;	
+	max-width: 100%;
+}	
+
+.form-group.row > .col-sm-2 {
+	margin: auto;
+}
+}
+
+.kur-isigyti-kiekis {
+	font-family: plutosans;
+    font-weight: 200;
+    font-size: 20pt;
+    color: #00324e;
+	text-transform: uppercase;
+}
+
+.kur-isigyti-melynas {
+    background-image: radial-gradient(rgb(100,178,219),rgb(79,159,199));
+	margin-bottom: 0px;
+}
+
+.kur-isigyti-melynas > figure {
+	margin-bottom: 0px;
+	padding-top: 80px;
+}
+.kur-isigyti-restoranai-1 {
+    width: 100%;
+    padding: 0px 25% 30px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.kur-isigyti-restoranai-2 {
+    width: 100%;
+    padding: 0px 31.25% 30px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.kur-isigyti-logo {
+    padding-top: 100px;
+    margin-bottom: 0px;
+}
+
+.kur-isigyti-inverted > figure{
+    margin-bottom: 0px;
+}
+
+.kur-isigyti-inverted {
+    background-image: radial-gradient(rgb(1,65,106),rgb(0,46,79));
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+}
+
+p.kur-isigyti-text {
+    font-family: PlutoSans;
+    color: white;
+    font-size: 16pt;
+}
+
+div.kur-isigyti > figure > img{
+	padding-top: 100px;
+}
+
+form.kur-isigyti-forma {
+	width: 80%;
+    margin: auto;
+    font-family: PlutoSans;
+    color: rgb(0,46,79);
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+button.mygtukas-uzsakyti{
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgb(0,46,79);
+    padding: 2px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 16pt;	
+}
+
+/* Kur Isigyti checkmark */
+.form-check-label {
+	cursor: pointer;
+}
+.form-check {
+  display: block;
+  position: relative;
+  padding-left: 58px;
+  margin-bottom: 35px;
+  cursor: pointer;
+  padding-top:5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.form-check input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 48px;
+  width: 48px;
+  background-color: rgb(0,46,79);
+  border-radius: 50%;
+}
+.form-check:hover input ~ .checkmark {
+  background-color: rgba(0,46,79,0.5);
+}
+.form-check input:checked ~ .checkmark {
+  background-color: rgb(0,46,79);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form-check input:checked ~ .checkmark:after {
+  display: block;
+}
+.form-check .checkmark:after {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*
+ * Kiti produktai
+ */
+p.kiti-produktai {
+    margin: auto;
+    display: block;
+    width: 80%;
+    font-family: PlutoSans;
+    text-align: justify;
+}
+}
+/*
+ * Mobile
+ */
+ 
+ 	/*
+	 * Meniu Mobile Misc
+	 */
+a.mobile-menu-links {
+    display: block;
+    text-align: center;
+    font-family: PlutoSans;
+    text-transform: uppercase;
+    color: rgb(62,146,187);
+    padding: 10px 20px 10px;
+	font-size: 19pt;
+    font-weight: 200;
+}
+
+div.collapse, div.show, div.collapsing {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(0,49,76,0.9);
+	left: 0;
+}
+
+.mobile-menu-link-side {
+    width: calc(100%/3*2);
+    background-color: white;
+    display: inline-block;
+}
+
+.mobile-menu-link-side-soc-icons {
+	text-align: center;
+}
+
+.krevetes-svieziausios-social-icon {
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+.mobile-menu-close-side {
+	display: inline-block;
+	width: calc(100%/3);
+    height: 100%;
+    position: absolute;
+}
+
+.mobile-menu-close-side > button {
+	border: none;
+	padding: 0px;
+    color: white;
+    font-size: 96pt;
+	height: 100%;
+    width: 100%;
+}
+
+#mobile-menu-logo-home {
+	height: 110px;
+	padding: 5px;
+}
+
+.mobile-menu-logo-home {
+	display: none;
+}
+
+#mobile-menu-logo {
+    height: 90px;
+    padding: 5px;
+}
+
+.mobile-menu-logo {
+	display: none;
+}
+
+.mobile-menu-rightsidealign {
+	display: inline-block;
+    float: right;
+}
+
+#mobile-menu-pan-home {
+	height: 100px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+
+
+#mobile-menu-pan {
+	height: 120px;
+    padding: 5px;
+}
+
+.pos-f-t {
+	display: none;
+}
+ /*
+  * Mobile Meniu Media-rule
+  */
+@media only screen and (max-width:1360px)
+{
+.pos-f-t {
+	display: block;
+}
+
+.mobile-menu-pan {
+	display: inline-block;
+    z-index: 1;
+    position: absolute;
+	right: 50px;
+    top: 15px;
+}
+
+.mobile-menu-pan-home {
+	display: inline-block;
+    height: 110px;
+    padding: 5px;
+    margin-right: 10px;
+}
+	
+.mobile-menu-logo-home {
+	display: inline-block;
+}	
+
+.mobile-menu-logo {
+	display: inline-block;
+}
+
+div.container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width:100%;
+}
+
+button.navbar-toggler {
+	display: inline-block;
+    margin-right: 0;	
+	float:right;
+	padding: 0px;
+	border: 0px;
+}
+
+nav.blog-nav.navbar {
+	display: none;
+}
+nav.blog-nav.navbar.mobile-menu {
+	display: block;
+}
+.navbar-toggler-icon {
+	background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0,47,79,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	margin-top: 40px;
+}
+.navbar-toggler-icon:focus, .navbar-toggler:focus {
+	outline: none;
+}
+
+	/*
+	 * Footer Mobile
+	 */
+.footer-all
+{
+	display:none;
+}
+.footer-social 
+{
+	display:block;
+	width: 100%;
+}
+.footer-social-icon {
+    display: inline-block;
+    height: 40px;
+    margin: 10px calc((100%-40*3px)/12);
+}
+	/*
+	 * 
+	 */
+}	
